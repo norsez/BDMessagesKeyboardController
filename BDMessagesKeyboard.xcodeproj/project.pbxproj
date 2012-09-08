@@ -1,0 +1,287 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F33AD55215FB0143007408DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33AD55115FB0143007408DB /* UIKit.framework */; };
+		F33AD55415FB0143007408DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33AD55315FB0143007408DB /* Foundation.framework */; };
+		F33AD55615FB0143007408DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33AD55515FB0143007408DB /* CoreGraphics.framework */; };
+		F33AD55C15FB0143007408DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F33AD55A15FB0143007408DB /* InfoPlist.strings */; };
+		F33AD55E15FB0143007408DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F33AD55D15FB0143007408DB /* main.m */; };
+		F33AD56215FB0143007408DB /* BDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F33AD56115FB0143007408DB /* BDAppDelegate.m */; };
+		F33AD56515FB0143007408DB /* BDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33AD56415FB0143007408DB /* BDViewController.m */; };
+		F33AD56815FB0143007408DB /* BDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F33AD56615FB0143007408DB /* BDViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F33AD54D15FB0143007408DB /* BDMessagesKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BDMessagesKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F33AD55115FB0143007408DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F33AD55315FB0143007408DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F33AD55515FB0143007408DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F33AD55915FB0143007408DB /* BDMessagesKeyboard-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BDMessagesKeyboard-Info.plist"; sourceTree = "<group>"; };
+		F33AD55B15FB0143007408DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F33AD55D15FB0143007408DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F33AD55F15FB0143007408DB /* BDMessagesKeyboard-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BDMessagesKeyboard-Prefix.pch"; sourceTree = "<group>"; };
+		F33AD56015FB0143007408DB /* BDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BDAppDelegate.h; sourceTree = "<group>"; };
+		F33AD56115FB0143007408DB /* BDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BDAppDelegate.m; sourceTree = "<group>"; };
+		F33AD56315FB0143007408DB /* BDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BDViewController.h; sourceTree = "<group>"; };
+		F33AD56415FB0143007408DB /* BDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BDViewController.m; sourceTree = "<group>"; };
+		F33AD56715FB0143007408DB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BDViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F33AD54A15FB0143007408DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F33AD55215FB0143007408DB /* UIKit.framework in Frameworks */,
+				F33AD55415FB0143007408DB /* Foundation.framework in Frameworks */,
+				F33AD55615FB0143007408DB /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F33AD54215FB0143007408DB = {
+			isa = PBXGroup;
+			children = (
+				F33AD55715FB0143007408DB /* BDMessagesKeyboard */,
+				F33AD55015FB0143007408DB /* Frameworks */,
+				F33AD54E15FB0143007408DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F33AD54E15FB0143007408DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F33AD54D15FB0143007408DB /* BDMessagesKeyboard.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F33AD55015FB0143007408DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F33AD55115FB0143007408DB /* UIKit.framework */,
+				F33AD55315FB0143007408DB /* Foundation.framework */,
+				F33AD55515FB0143007408DB /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F33AD55715FB0143007408DB /* BDMessagesKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F33AD56015FB0143007408DB /* BDAppDelegate.h */,
+				F33AD56115FB0143007408DB /* BDAppDelegate.m */,
+				F33AD56315FB0143007408DB /* BDViewController.h */,
+				F33AD56415FB0143007408DB /* BDViewController.m */,
+				F33AD56615FB0143007408DB /* BDViewController.xib */,
+				F33AD55815FB0143007408DB /* Supporting Files */,
+			);
+			path = BDMessagesKeyboard;
+			sourceTree = "<group>";
+		};
+		F33AD55815FB0143007408DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F33AD55915FB0143007408DB /* BDMessagesKeyboard-Info.plist */,
+				F33AD55A15FB0143007408DB /* InfoPlist.strings */,
+				F33AD55D15FB0143007408DB /* main.m */,
+				F33AD55F15FB0143007408DB /* BDMessagesKeyboard-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F33AD54C15FB0143007408DB /* BDMessagesKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F33AD56B15FB0143007408DB /* Build configuration list for PBXNativeTarget "BDMessagesKeyboard" */;
+			buildPhases = (
+				F33AD54915FB0143007408DB /* Sources */,
+				F33AD54A15FB0143007408DB /* Frameworks */,
+				F33AD54B15FB0143007408DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BDMessagesKeyboard;
+			productName = BDMessagesKeyboard;
+			productReference = F33AD54D15FB0143007408DB /* BDMessagesKeyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F33AD54415FB0143007408DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BD;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = Bluedot;
+			};
+			buildConfigurationList = F33AD54715FB0143007408DB /* Build configuration list for PBXProject "BDMessagesKeyboard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F33AD54215FB0143007408DB;
+			productRefGroup = F33AD54E15FB0143007408DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F33AD54C15FB0143007408DB /* BDMessagesKeyboard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F33AD54B15FB0143007408DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F33AD55C15FB0143007408DB /* InfoPlist.strings in Resources */,
+				F33AD56815FB0143007408DB /* BDViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F33AD54915FB0143007408DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F33AD55E15FB0143007408DB /* main.m in Sources */,
+				F33AD56215FB0143007408DB /* BDAppDelegate.m in Sources */,
+				F33AD56515FB0143007408DB /* BDViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F33AD55A15FB0143007408DB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F33AD55B15FB0143007408DB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F33AD56615FB0143007408DB /* BDViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F33AD56715FB0143007408DB /* en */,
+			);
+			name = BDViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F33AD56915FB0143007408DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F33AD56A15FB0143007408DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F33AD56C15FB0143007408DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BDMessagesKeyboard/BDMessagesKeyboard-Prefix.pch";
+				INFOPLIST_FILE = "BDMessagesKeyboard/BDMessagesKeyboard-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F33AD56D15FB0143007408DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BDMessagesKeyboard/BDMessagesKeyboard-Prefix.pch";
+				INFOPLIST_FILE = "BDMessagesKeyboard/BDMessagesKeyboard-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F33AD54715FB0143007408DB /* Build configuration list for PBXProject "BDMessagesKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F33AD56915FB0143007408DB /* Debug */,
+				F33AD56A15FB0143007408DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F33AD56B15FB0143007408DB /* Build configuration list for PBXNativeTarget "BDMessagesKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F33AD56C15FB0143007408DB /* Debug */,
+				F33AD56D15FB0143007408DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F33AD54415FB0143007408DB /* Project object */;
+}
