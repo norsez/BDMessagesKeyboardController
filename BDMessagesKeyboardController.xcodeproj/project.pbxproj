@@ -19,6 +19,8 @@
 		F33AD58315FB01DA007408DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F33AD57D15FB01DA007408DB /* main.m */; };
 		F33AD58615FB023C007408DB /* BDMessagesKeyboardController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33AD58515FB023C007408DB /* BDMessagesKeyboardController.m */; };
 		F33AD58815FB0B41007408DB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33AD58715FB0B41007408DB /* QuartzCore.framework */; };
+		FF9F595C15FD928E0057D81E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FF9F595A15FD928E0057D81E /* README.md */; };
+		FF9F595D15FD928E0057D81E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = FF9F595B15FD928E0057D81E /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		F33AD58415FB023C007408DB /* BDMessagesKeyboardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDMessagesKeyboardController.h; sourceTree = "<group>"; };
 		F33AD58515FB023C007408DB /* BDMessagesKeyboardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDMessagesKeyboardController.m; sourceTree = "<group>"; };
 		F33AD58715FB0B41007408DB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FF9F595A15FD928E0057D81E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		FF9F595B15FD928E0057D81E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +63,8 @@
 		F33AD54215FB0143007408DB = {
 			isa = PBXGroup;
 			children = (
-				F33AD58715FB0B41007408DB /* QuartzCore.framework */,
+				FF9F595A15FD928E0057D81E /* README.md */,
+				FF9F595B15FD928E0057D81E /* LICENSE */,
 				F33AD57215FB01DA007408DB /* BDMessagesKeyboardController */,
 				F33AD56E15FB0164007408DB /* classes */,
 				F33AD55015FB0143007408DB /* Frameworks */,
@@ -78,6 +83,7 @@
 		F33AD55015FB0143007408DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F33AD58715FB0B41007408DB /* QuartzCore.framework */,
 				F33AD55115FB0143007408DB /* UIKit.framework */,
 				F33AD55315FB0143007408DB /* Foundation.framework */,
 				F33AD55515FB0143007408DB /* CoreGraphics.framework */,
@@ -167,6 +173,8 @@
 				F33AD58115FB01DA007408DB /* BDViewController.xib in Resources */,
 				F33AD58215FB01DA007408DB /* InfoPlist.strings in Resources */,
 				F3138DE915FC4A11006843D0 /* 1.jpg in Resources */,
+				FF9F595C15FD928E0057D81E /* README.md in Resources */,
+				FF9F595D15FD928E0057D81E /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
