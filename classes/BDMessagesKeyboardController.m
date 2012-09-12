@@ -23,6 +23,8 @@
     CGRect _keyboardFrame;
     CAGradientLayer *_backgroundGradient;
 
+    UIScrollView *_adjustedScrollView;
+    UIView *_adjustToSubview;
 }
 @end
 
@@ -182,10 +184,23 @@
     }
    
     [self resizeEditor:YES];
+    
+    CGRect textEditorOnScrollView = [_superViewController.view convertRect:_textEditorBackgroundView.frame toView:_adjustedScrollView];
+    CGFloat offset = CGRectGetMinY(textEditorOnScrollView)>CGRectGetMinY(_adjustToSubview.frame)?0:(CGRectGetMinY(_adjustToSubview.frame) - CGRectGetMinY(textEditorOnScrollView) + CGRectGetHeight(textEditorOnScrollView));
+    
+    //assuming scrollview is on viewControllerToDisplayOn and its minY is zero
+    [_adjustedScrollView setContentOffset:CGPointMake(0, offset) animated:YES];
+    
 }
 
 - (void)showOnViewController:(UIViewController *)viewControllerToDisplayOn
 {
+    [self showOnViewController:viewControllerToDisplayOn adjustingScrollView:nil forScrollViewSubview:nil];
+}
+
+- (void)showOnViewController:(UIViewController *)viewControllerToDisplayOn adjustingScrollView:(UIScrollView *)scrollView forScrollViewSubview:(UIView *)subViewInScrollView
+{
+    
     _superViewController = viewControllerToDisplayOn;
     [_superViewController.view addSubview:self.view];
     self.view.frame = _superViewController.view.bounds;
@@ -197,6 +212,9 @@
     }
     [_textView becomeFirstResponder];
     [self viewDidLayoutSubviews];
+    
+    _adjustedScrollView = scrollView;
+    _adjustToSubview = subViewInScrollView;
 }
 
 - (void)hideWithCompletion:(void(^)(void))completion
@@ -218,9 +236,13 @@
                                                   _superViewController = nil;
                                                   completion();
                                               }
+                                              
+                          [_adjustedScrollView setContentOffset:CGPointZero animated:YES] ;
                                           }];
 
                      }];
+    
+    
 }
 
 - (void)hide

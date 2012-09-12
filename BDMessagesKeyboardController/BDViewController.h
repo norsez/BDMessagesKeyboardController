@@ -12,4 +12,6 @@
 
 - (IBAction)showMessageKeyboard:(id)sender;
 @property (nonatomic, strong) IBOutlet UIView* demoAccessoryView;
+@property (nonatomic, strong) IBOutlet UIScrollView* scrollView;
+@property (nonatomic, strong) IBOutlet UIButton *button;
 @end

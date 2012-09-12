@@ -10,6 +10,7 @@
 
 @interface BDMessagesKeyboardController : UIViewController <UITextViewDelegate, UIGestureRecognizerDelegate>
 - (void)showOnViewController:(UIViewController*)viewControllerToDisplayOn;
+- (void)showOnViewController:(UIViewController *)viewControllerToDisplayOn adjustingScrollView:(UIScrollView*)scrollView forScrollViewSubview:(UIView*)subViewInScrollView;
 - (void)hide;
 - (void)clearTextView;
 

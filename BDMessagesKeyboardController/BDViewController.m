@@ -59,7 +59,7 @@
 
 - (void)showMessageKeyboard:(id)sender
 {
-    [_kbCtrl showOnViewController:self];
+    [_kbCtrl showOnViewController:self adjustingScrollView:self.scrollView forScrollViewSubview:self.button];
 }
 
 @end
