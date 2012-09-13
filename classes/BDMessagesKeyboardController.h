@@ -33,4 +33,16 @@
 @property (nonatomic, copy) void(^didPressDone)(NSString*);
 @property (nonatomic, copy) void(^didPressCancel)(NSString*);
 @property (nonatomic, copy) void(^willShowKeyboard)(UITextView*);
+
+/**
+ Called as the text editor is going to be dismissed by the Done button.
+ The block must return NO, in order to stop the text editor from being dismissed.
+ */
+@property (nonatomic, copy) BOOL(^shouldDismissKeyboard)(NSString*);
+/**
+ Blocked called when BOOL(^shouldDismissKeyboard)(NSString*) returns NO
+ in order to customize handling of reporting unable to dismiss reason.
+ This property is optional and default to this class default animation.
+ */
+@property (nonatomic, copy) BOOL(^onCannotDismissKeyboard)(UITextView*);
 @end

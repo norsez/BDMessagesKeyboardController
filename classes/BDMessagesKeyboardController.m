@@ -12,6 +12,10 @@
 #define kHeightTextEditor 58
 #define kMargin 8
 #define kHeightMinAccessoryView 44
+
+#define kColorErrorGradient1 [UIColor colorWithRed: 0.87 green: 0.16 blue: 0.08 alpha: 0.75]
+#define kColorErrorGradient2 [UIColor colorWithRed: 1 green: 0.25 blue: 0.24 alpha: 1]
+
 @interface BDMessagesKeyboardController ()
 {
     UIViewController *_superViewController;
@@ -26,6 +30,9 @@
     UIScrollView *_adjustedScrollView;
     UIView *_adjustToSubview;
 }
+
+- (void)animateCannotDismissTextEditor;
+
 @end
 
 @implementation BDMessagesKeyboardController
@@ -256,16 +263,67 @@
     [self resizeEditor:NO];
 }
 
+static UIView* animationCannotDismissTextEditorView;
+- (void)stopAnimatingCannotDismissTextEditor:(id)sender
+{
+    [UIView animateWithDuration:0.01
+                          delay:0
+                        options:UIViewAnimationOptionBeginFromCurrentState
+                     animations:^{
+                         animationCannotDismissTextEditorView.alpha = 0;
+                     } completion:^(BOOL finished) {
+                         [animationCannotDismissTextEditorView removeFromSuperview];
+                         animationCannotDismissTextEditorView = nil;
+                         
+                     }];
+    
+}
+
+- (void)animateCannotDismissTextEditor
+{
+    if (animationCannotDismissTextEditorView==nil) {
+        CAGradientLayer *gl = [CAGradientLayer layer];
+        gl.frame = _textView.bounds;
+        gl.colors = [NSArray arrayWithObjects:(id)kColorErrorGradient1.CGColor, (id)kColorErrorGradient2.CGColor, nil];
+        animationCannotDismissTextEditorView = [[UIView alloc] initWithFrame:_textView.bounds];
+        [animationCannotDismissTextEditorView.layer addSublayer:gl];
+        gl.frame = animationCannotDismissTextEditorView.bounds;
+        [_textView insertSubview:animationCannotDismissTextEditorView atIndex:0];
+    }
+    
+    [UIView animateWithDuration:kIntervalAnimation * 0.5
+     delay:0 options:UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse
+                     animations:^{
+                         animationCannotDismissTextEditorView.alpha = 0.f;
+                     }completion:nil];
+    
+    [self performSelector:@selector(stopAnimatingCannotDismissTextEditor:)
+               withObject:nil afterDelay:0.5];
+}
 
 #pragma mark - handling events
 
 - (void)onPressDone:(id)sender
 {
-    [self hideWithCompletion:^{
-        if  (self.didPressDone){
-            self.didPressDone(_textView.text);
+    BOOL canDismiss = YES;
+    if (self.shouldDismissKeyboard) {
+        canDismiss = self.shouldDismissKeyboard(_textView.text);
+    }
+    
+    if (canDismiss) {
+        [self hideWithCompletion:^{
+            if  (self.didPressDone){
+                self.didPressDone(_textView.text);
+            }
+        }];
+    }else{
+        if (self.onCannotDismissKeyboard) {
+            self.onCannotDismissKeyboard(_textView);
+        }else{
+            [self animateCannotDismissTextEditor];
         }
-    }];
+    }
+
 }
 
 - (void)onPressCancel:(id)sender

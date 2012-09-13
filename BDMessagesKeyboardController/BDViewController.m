@@ -43,6 +43,11 @@
         btn.layer.cornerRadius = 4;
         [btn setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
     };
+    
+    _kbCtrl.shouldDismissKeyboard = ^BOOL(NSString* inputText){
+        inputText = [inputText stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@" \r\n"]];
+        return inputText.length > 0;
+    };
        
 }
 
