@@ -18,17 +18,10 @@
 
 @interface BDMessagesKeyboardController ()
 {
-    UIViewController *_superViewController;
-    UITextView* _textView;
-    UIView* _textEditorBackgroundView;
-    UIButton *_cancelButton;
-    UIButton *_doneButton;
+
     UITapGestureRecognizer *_tapToCancel;
     CGRect _keyboardFrame;
     CAGradientLayer *_backgroundGradient;
-
-    UIScrollView *_adjustedScrollView;
-    UIView *_adjustToSubview;
 }
 
 - (void)animateCannotDismissTextEditor;

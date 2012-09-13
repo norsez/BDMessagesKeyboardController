@@ -8,7 +8,41 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BDMessagesKeyboardController : UIViewController <UITextViewDelegate, UIGestureRecognizerDelegate>
+@interface BDMessagesKeyboardController : UIViewController <UITextViewDelegate, UIGestureRecognizerDelegate>{
+@protected
+    /**
+     The view controller whose view this class displays text editor over.
+     */
+    UIViewController *_superViewController;
+    /**
+     The text view for text input.
+     */
+    UITextView* _textView;
+    /**
+     The background view that contains the text view and buttons.
+     */
+    UIView* _textEditorBackgroundView;
+    /**
+     The defualt cancel button.
+     */
+    UIButton *_cancelButton;
+    /**
+     The default done button.
+     */
+    UIButton *_doneButton;
+    /**
+     The scrollView being adjusted while displaying the text editor.
+     */
+    UIScrollView *_adjustedScrollView;
+    /**
+     The reference subview of the adjustedScrollView that this class will
+     try its best to offset the scroll view in order to avoid the text editor from
+     obscuring this particular subview.
+     */
+    UIView *_adjustToSubview;
+
+}
+
 - (void)showOnViewController:(UIViewController*)viewControllerToDisplayOn;
 - (void)showOnViewController:(UIViewController *)viewControllerToDisplayOn adjustingScrollView:(UIScrollView*)scrollView forScrollViewSubview:(UIView*)subViewInScrollView;
 - (void)hide;
