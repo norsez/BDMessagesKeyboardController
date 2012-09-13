@@ -26,11 +26,10 @@
 @property (nonatomic, copy) void(^styleDoneButton)(UIButton*);
 @property (nonatomic, strong) UIView* accessoryView;
 
-
 /**
  @name Event Handling.
  */
-@property (nonatomic, copy) void(^didPressDone)(NSString*);
+
 @property (nonatomic, copy) void(^didPressCancel)(NSString*);
 @property (nonatomic, copy) void(^willShowKeyboard)(UITextView*);
 
@@ -40,9 +39,17 @@
  */
 @property (nonatomic, copy) BOOL(^shouldDismissKeyboard)(NSString*);
 /**
- Blocked called when BOOL(^shouldDismissKeyboard)(NSString*) returns NO
+ Called after user hitting Done, when BOOL(^shouldDismissKeyboard)(NSString*) returns NO
  in order to customize handling of reporting unable to dismiss reason.
  This property is optional and default to this class default animation.
  */
 @property (nonatomic, copy) BOOL(^onCannotDismissKeyboard)(UITextView*);
+
+/**
+ Called if shouldDismissKeyboard is undefined or returns YES.
+ The returned NSString* is the user's final text input.
+ This block is executed after the text editor has been dismissed from
+ the parent view controller.
+ */
+@property (nonatomic, copy) void(^didPressDone)(NSString*);
 @end
