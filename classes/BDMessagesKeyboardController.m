@@ -128,6 +128,10 @@
 - (void)layoutTextEditor:(NSNotification*)notification
 {
 
+    if (![_textView isFirstResponder]) {
+        return;
+    }
+    
     NSDictionary *kbInfo = notification.userInfo;
     NSValue * frameEndValueKB = [kbInfo valueForKey:UIKeyboardFrameEndUserInfoKey];
     _keyboardFrame = frameEndValueKB.CGRectValue;
@@ -237,7 +241,7 @@
                                                   completion();
                                               }
                                               
-                          [_adjustedScrollView setContentOffset:CGPointZero animated:YES] ;
+                                              [_adjustedScrollView setContentOffset:CGPointZero animated:YES] ;
                                           }];
 
                      }];
