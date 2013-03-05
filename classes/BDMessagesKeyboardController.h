@@ -68,6 +68,11 @@
  */
 - (void)clearTextView;
 
+/**
+ * Set text to the text editor.
+ */
+- (void)setText:(NSString*)text;
+
 
 /**
  @name Customize Look and Feel.
@@ -115,8 +120,11 @@
  The view which is displayed on top of the text editor. 
  This view should not respond to user interactions and it should be
  automatically resized which the size of the text editor changes.
+
  */
-@property (nonatomic, strong) UIView* accessoryView;
+@property (nonatomic, strong) UIView* accessoryView __deprecated;
+
+@property (nonatomic, strong) UIView *inputAccessoryView;
 
 /**
  @name Event Handling.

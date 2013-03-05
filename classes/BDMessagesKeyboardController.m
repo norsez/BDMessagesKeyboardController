@@ -75,8 +75,10 @@
     _textView = [[UITextView alloc] initWithFrame:CGRectZero];
     _textView.layer.cornerRadius = 3;
     _textView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleRightMargin;
+    _textView.inputAccessoryView = self.inputAccessoryView;
     [_textEditorBackgroundView addSubview:_textView];
     _textView.delegate = self;
+    _textView.inputAccessoryView = self.inputAccessoryView;
     
     _cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -174,11 +176,12 @@
                                        );
     }
     
-    if  (self.styleBackgroundView){
-        self.styleBackgroundView(_textEditorBackgroundView);
-    }
+
     if  (self.styleTextView){
         self.styleTextView(_textView);
+    }    
+    if  (self.styleBackgroundView){
+        self.styleBackgroundView(_textEditorBackgroundView);
     }
     if  (self.showCancelButton && self.styleCancelButton){
         self.styleCancelButton(_cancelButton);
@@ -186,9 +189,9 @@
     if  (self.styleDoneButton){
         self.styleDoneButton(_doneButton);
     }
-   
-    [self resizeEditor:YES];
     
+    [self resizeEditor:YES];
+   
     CGRect textEditorOnScrollView = [_superViewController.view convertRect:_textEditorBackgroundView.frame toView:_adjustedScrollView];
     CGFloat offset = CGRectGetMinY(textEditorOnScrollView)>CGRectGetMinY(_adjustToSubview.frame)?0:(CGRectGetMinY(_adjustToSubview.frame) - CGRectGetMinY(textEditorOnScrollView) + CGRectGetHeight(textEditorOnScrollView));
     
@@ -257,6 +260,12 @@
 - (void)clearTextView
 {
     _textView.text = nil;
+    [self resizeEditor:NO];
+}
+
+- (void)setText:(NSString *)text
+{
+    _textView.text = text;
     [self resizeEditor:NO];
 }
 
