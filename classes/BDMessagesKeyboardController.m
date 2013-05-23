@@ -348,7 +348,7 @@ static UIView* animationCannotDismissTextEditorView;
     CGFloat heightViewport = CGRectGetHeight( _superViewController.view.bounds) - CGRectGetHeight(_keyboardFrame);
     CGSize textSize = [_textView.text sizeWithFont:_textView.font
                                  constrainedToSize:CGSizeMake(CGRectGetWidth(_textView.bounds) * 0.8, heightViewport * 0.6)
-                                     lineBreakMode:UILineBreakModeWordWrap];
+                                     lineBreakMode:NSLineBreakByWordWrapping];
     CGFloat updatedHeight = textSize.height + 20;
     updatedHeight = MIN(updatedHeight, heightViewport - kHeightMinAccessoryView);
     updatedHeight = MAX(self.editorHeight, updatedHeight);
