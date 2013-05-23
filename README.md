@@ -25,9 +25,11 @@ Inspired by how Messages and the native Facebook apps allows user to input short
 ---
 
 ##How to use
+
 - Be sure to checkout the latest __tag__, as opposed to the latest commit. Only tagged points are stable.
 - Without CocoaPods, just include h/.m files in Classes folder to your source code
 - Look at the iPhone demo. Read the comments. Send me questions, if any.
+ 
  
  
 ---
