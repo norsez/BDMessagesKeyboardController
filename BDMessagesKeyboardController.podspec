@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author             = "Norsez Orankijanan"
   s.platform     = :ios, '7.0'
-  s.source       = { :git => "https://github.com/robertibiris/BDMessagesKeyboardController.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/norsez/BDMessagesKeyboardController.git", :tag => s.version.to_s }
   s.source_files  = "classes/**/*.{h,m}"
 
   s.frameworks = "QuartzCore"
